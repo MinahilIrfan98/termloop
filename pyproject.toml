@@ -1,0 +1,23 @@
+[project]
+name = "api"
+version = "0.1.0"
+description = "A school-safe AI term explainer for students"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.115",
+    "langchain>=1.4.7",
+    "langchain-google-genai>=4.4.2",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.0",
+    "pydantic>=2.10",
+    "sqlmodel>=0.0.24",
+    "httpx>=0.28",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3", "pytest-cov>=6.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
